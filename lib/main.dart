@@ -45,6 +45,7 @@ class MyApp extends StatelessWidget {
                 color: Colors.teal.shade100,
               ),
             ),
+            //1º FORMA DE CREAR UNA CARD
             Container(
               width: double.infinity,
               height: 60.0,
@@ -61,7 +62,7 @@ class MyApp extends StatelessWidget {
                     color: Colors.teal,
                   ),
                   SizedBox(
-                    width: 40.0,
+                    width: 30.0,
                   ),
                   Text(
                     '+34 651 375 300',
@@ -76,34 +77,23 @@ class MyApp extends StatelessWidget {
             SizedBox(
               height: 20.0,
             ),
-            Container(
-              width: double.infinity,
-              height: 60.0,
-              margin: EdgeInsets.symmetric(horizontal: 30.0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(5.0),
-              ),
-              padding: EdgeInsetsDirectional.only(start: 20.0),
-              child: Row(
-                children: <Widget>[
-                  Icon(
+            //2º FORMA DE CREAR UNA CARD
+            Card(
+              margin: EdgeInsets.symmetric(horizontal: 30.0, vertical: 10.0),
+              child: ListTile(
+                leading: Icon(
                     Icons.email,
                     color: Colors.teal,
-                  ),
-                  SizedBox(
-                    width: 40.0,
-                  ),
-                  Text(
-                    'davidborregoa@hotmail.com',
-                    style: TextStyle(
-                        color: Colors.teal,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold),
-                  )
-                ],
+                ),
+              title: Text(
+                'davidborregoa@hotmail.com',
+                style: TextStyle(
+                color: Colors.teal,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold),
               ),
-            ),
+              ),
+            ),           
           ],
         ),
       ),
